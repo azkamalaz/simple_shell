@@ -34,7 +34,7 @@ void get_commands(data_t *data)
 		else if (*(data->data001) != '\n')
 		{
 			data->data014 = 127;
-			errprint(data, "not accessible\n");
+			errprint(data, "not found\n");
 		}
 	}
 }
