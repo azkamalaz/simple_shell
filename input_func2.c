@@ -1,14 +1,14 @@
 #include "main.h"
 /**
- * if_chaining - checks if chaining on last status.
+ * if_chain - checks if chaining on last status.
  * @data: parameter.
  * @buffer: buffer.
  * @pos: position in buffer.
- * @start: starting position in buffer.
- * @length: length.
+ * @sta: starting position in buffer.
+ * @len: length.
  * Return: Void.
  */
-void if_chaining(data_t *data, char *buffer, size_t *pos, size_t start, size_t length)
+void if_chain(data_t *data, char *buffer, size_t *pos, size_t sta, size_t len)
 {
 	size_t a = *pos;
 
@@ -16,16 +16,16 @@ void if_chaining(data_t *data, char *buffer, size_t *pos, size_t start, size_t l
 	{
 		if (data->data014)
 		{
-			buffer[start] = 0;
-			a = length;
+			buffer[sta] = 0;
+			a = len;
 		}
 	}
 	if (data->data016 == 1)
 	{
 		if (!data->data014)
 		{
-			buffer[start] = 0;
-			a = length;
+			buffer[sta] = 0;
+			a = len;
 		}
 	}
 

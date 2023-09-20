@@ -15,7 +15,7 @@ void get_commands(data_t *data)
 		data->data007 = 0;
 	}
 	for (a = 0, b = 0; data->data001[a]; a++)
-		if (!delim_check(data->data001[a], " \t\n"))
+		if (!delcheck(data->data001[a], " \t\n"))
 			b++;
 	if (!b)
 		return;
@@ -39,12 +39,12 @@ void get_commands(data_t *data)
 	}
 }
 /**
- * delim_check - verify if character is a delimeter.
+ * delcheck - verify if character is a delimeter.
  * @chars: character to check.
  * @dm: delimeter.
  * Return: 1 (seccess), 0 (failure)
  */
-int delim_check(char chars, char *dm)
+int delcheck(char chars, char *dm)
 {
 	while (*dm)
 		if (*dm++ == chars)

@@ -20,7 +20,7 @@ ssize_t read_line(data_t *data)
 		j = i;
 		ptr = buffer + i;
 
-		if_chaining(data, buffer, &j, i, length);
+		if_chain(data, buffer, &j, i, length);
 		while (j < length)
 		{
 			if (check_chaining(data, buffer, &j))

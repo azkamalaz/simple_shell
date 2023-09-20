@@ -27,7 +27,7 @@ typedef struct node
 } node_t;
 
 /**
- *struct - arguments for function.
+ *struct get_data - arguments for function.
  *@data001: string of arguements.
  *@data002: strings make from args.
  *@data003: path of string.
@@ -70,7 +70,8 @@ typedef struct get_data
 } data_t;
 
 #define DATA_INIT \
-{NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, 0, 0, 0}
+{NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, \
+	NULL, NULL, NULL, 0, 0, NULL, 0, 0, 0}
 
 /**
  *struct builtin - hold a builtin string.
@@ -132,7 +133,7 @@ int str_alias_print(node_t *node);
 node_t *node_with_prefix(node_t *node, char *prefix, char chars);
 int alias_puts(node_t *node);
 int mimi_alias(data_t *data);
-int delim_check(char chars, char *dm);
+int delcheck(char chars, char *dm);
 int command_check(data_t *data, char *p);
 char *chars_cp(char *str, int start_idx, int stop_idx);
 char *get_cmd_path(data_t *data, char *str, char *cmd);
@@ -150,7 +151,7 @@ void str_of_str_free(char **strstr);
 void free_nodes(node_t **ptr);
 int ptr_free_addr(void **ptr);
 int str_inp_print(char *str, int file_d);
-void if_chaining(data_t *data, char *buffer, size_t *pos, size_t start, size_t length);
+void if_chain(data_t *data, char *buffer, size_t *pos, size_t sta, size_t len);
 int check_chaining(data_t *data, char *buffer, size_t *pos);
 void ctrl_c(__attribute__((unused))int signal);
 size_t length_of_list(const node_t *head);
@@ -161,5 +162,7 @@ int alias_to_token(data_t *data);
 int str_change(char **str1, char *str2);
 int var_to_token(data_t *data);
 void data_init(data_t *data, char **arg_v);
+
+extern char **environ;
 
 #endif

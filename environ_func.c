@@ -6,7 +6,6 @@
  */
 int env_list(data_t *data)
 {
-	extern char **environ;
 	node_t *node = NULL;
 	size_t i;
 

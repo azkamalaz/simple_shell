@@ -56,7 +56,7 @@ char **string_to_word(char *str, char *delim)
 	if (!delim)
 		delim = " ";
 	for (i = 0; str[i] != '\0'; i++)
-		if (!delim_check(str[i], delim) && (delim_check(str[i + 1], delim) || !str[i + 1]))
+		if (!delcheck(str[i], delim) && (delcheck(str[i + 1], delim) || !str[i + 1]))
 			count++;
 
 	if (count == 0)
@@ -66,10 +66,10 @@ char **string_to_word(char *str, char *delim)
 		return (NULL);
 	for (i = 0, j = 0; j < count; j++)
 	{
-		while (delim_check(str[i], delim))
+		while (delcheck(str[i], delim))
 			i++;
 		a = 0;
-		while (!delim_check(str[i + a], delim) && str[i + a])
+		while (!delcheck(str[i + a], delim) && str[i + a])
 			a++;
 		ptr[j] = malloc((a + 1) * sizeof(char));
 		if (!ptr[j])
