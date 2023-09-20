@@ -67,7 +67,7 @@ char *atoa_clone(long int n, int b, int f)
 	*ptr = '\0';
 
 	do	{
-		*--ptr = arr[n % b];
+		*--ptr = arr[a % b];
 		a /= b;
 	} while (a != 0);
 

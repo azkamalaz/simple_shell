@@ -74,7 +74,7 @@ ssize_t input_cmd(data_t *data, char **buffer, size_t *length)
 			data->data007 = 1;
 			remp_sharp(*buffer);
 			create_hist_list(data, *buffer, data->data018++);
-			/* if (_strchr(*buf, ';')) is this a command chain? */
+			/* if (_strchr(*buffer, ';'))*/
 			{
 				*length = track;
 				data->data015 = buffer;
