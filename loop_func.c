@@ -114,7 +114,7 @@ int _quit(data_t *data)
 		if (check == -1)
 		{
 			data->data014 = 2;
-			errprint(data, "incorrect number: ");
+			errprint(data, "Illegal number: ");
 			print_err_str(data->data002[1]);
 			print_err_chars('\n');
 			return (1);
