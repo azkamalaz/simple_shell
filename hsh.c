@@ -20,7 +20,7 @@ int main(int argc, char **argv)
 			if (errno == ENOENT)
 			{
 				print_err_str(argv[0]);
-				print_err_str("cannot open");
+				print_err_str(" 0: Can't open ");
 				print_err_str(argv[1]);
 				print_err_chars('\n');
 				print_err_chars(-1);
