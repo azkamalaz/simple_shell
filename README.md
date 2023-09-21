@@ -1,6 +1,6 @@
 0x16. C - Simple Shell
 Project to done in teams of 2 people /team: Kamal Azenag, Abosede Ajoloko/
-files
+Files:
 README.md - description about the project repo
 man_1_simple_shell - is the man page for the shell we are going to write.
 AUTHORS - file at the root of your repository, listing all individuals having contributed content to the repository.
